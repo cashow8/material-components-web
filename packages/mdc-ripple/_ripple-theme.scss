@@ -403,6 +403,14 @@ $pressed-light-ink-opacity: 0.32 !default;
   }
 }
 
+// Selector for active state. Includes `:focus:active` to override focus styles.
+@mixin active() {
+  &:active,
+  &:focus:active {
+    @content;
+  }
+}
+
 /// Keep the ripple (State overlay) behind the content.
 @mixin behind-content(
   $ripple-target,
